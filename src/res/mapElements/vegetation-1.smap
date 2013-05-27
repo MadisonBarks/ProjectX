@@ -1,0 +1,56 @@
+# comments begin with a pound symbol
+#
+# the first non-comment line is the relative path (from this file's directory) to the image this map file represents
+mapElements/vegetation-1.png	600	600
+# each sub image has it's information formatted like this:
+# x_coordinate y_coordinate width height outputName
+# (separated by tabs and/or spaces)
+#
+0	0	37	75	tallTree1
+0	75	37	75	tallTree2
+0	150	37	75	tallTree3
+0	225	37	75	tallTree4
+0	300	37	75	tallTree5
+0	375	37	75	tallTree6
+0	450	37	75	tallTree7
+0	525	37	75	tallTree8
+#
+37	0	75	75	fatTree1
+37	75	75	75	fatTree2
+37	150	75	75	fatTree3
+37	225	75	75	fatTree4
+37	300	75	75	fatTree5
+37	375	75	75	fatTree6
+37	450	75	75	fatTree7
+37	525	75	75	fatTree8
+#
+406	0	75	75	smallTree1
+406	75	75	75	smallTree2
+406	150	75	75	smallTree3
+406	225	75	75	smallTree4
+406	300	75	75	smallTree5
+406	375	75	75	smallTree6
+406	450	75	75	smallTree7
+406	525	75	75	smallTree8
+#
+187	0	75	75	pineTree1
+187	75	75	75	pineTree2
+187	150	75	75	pineTree3
+187	225	75	75	pineTree4
+187	300	75	75	pineTree5
+187	375	75	75	pineTree6
+187	450	75	75	pineTree7
+187	525	75	75	pineTree8
+#
+262	0	37	37	groundVeg1
+262	37	37	37	groundVeg2
+300	0	37	37	groundVeg3
+300	37	37	37	groundVeg4
+337	0	37	37	groundVeg5
+337	37	37	37	groundVeg6
+450	0	37	37	groundVeg7
+450	37	37	37	groundVeg8
+525	0	37	37	groundVeg9
+562	0	37	37	groundVeg10
+#
+375	0	37	37	groundRock1

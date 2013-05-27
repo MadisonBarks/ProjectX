@@ -1,0 +1,37 @@
+# comments begin with a pound symbol
+#
+# the first non-comment line is the relative path (from this file's directory) to the image this map file represents
+mapElements/vegetation-2.png	512	512
+# each sub image has it's information formatted like this:
+# x_coordinate y_coordinate width height boolean_Solid [default x offset when drawing [default y offset when drawing]] outputName
+# (separated by tabs and/or spaces)
+#
+0	0	32	32	false	groundVeg1
+#0	32	32	32	true	groundVeg2
+0	64	32	32	false	groundVeg2
+32	0	32	32	false	groundVeg3
+#32	32	32	32	true	groundVeg4
+32	63	32	32	false	groundVeg4
+64	0	32	32	false	groundVeg5
+64	32	32	32	false	groundVeg6
+96	0	32	32	false	groundVeg7
+96	32	32	32	false	groundVeg8
+128	0	32	32	false	groundVeg9
+128	32	32	32	false	groundVeg10
+192	0	32	32	false	groundVeg11
+192	32	32	32	false	groundVeg12
+224	0	32	32	false	groundVeg13
+224	0	32	32	false	groundVeg14
+#
+#
+#
+64	64	64	64	true	0	4	tree1
+128	64	64	64	true	0	4	tree2
+64	128	64	64	true	0	4	tree3
+128	128	64	64	true	0	4	tree4
+128	192	64	64	true	0	4	tree5
+#
+0	96	64	96	true	palmTree1
+#
+0	192	64	64	true	deadTree1
+64	192	64	64	true	deadTree2
