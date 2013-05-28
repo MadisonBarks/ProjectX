@@ -1,6 +1,7 @@
 package com.focused.projectf;
 
 
+import java.io.File;
 import java.lang.management.ManagementFactory;
 
 import org.lwjgl.LWJGLException;
@@ -40,7 +41,7 @@ public class MainLoop {
 	public static String getOs() {
 		String var0 = System.getProperty("os.name").toLowerCase();
 
-		return var0.contains("win") ? "Windows" : (var0.contains("mac") ? "Mac" : (var0.contains("solaris") ? "Solaris" : (var0.contains("sunos") ? "Solaris" : (var0.contains("linux") ? "Linux" : (var0.contains("unix") ? "Linux" : "Unknown")))));
+		return var0.contains("win") ? "Windows" : (var0.contains("mac") ? "Macosx" : (var0.contains("solaris") ? "Solaris" : (var0.contains("sunos") ? "Solaris" : (var0.contains("linux") ? "Linux" : (var0.contains("unix") ? "Linux" : "Unknown")))));
 	}
 
 	public void start() {
@@ -142,8 +143,30 @@ public class MainLoop {
 		ErrorManager.printPropertiesToFile();
 		System.out.println(System.getProperty("org.lwjgl.librarypath"));
 
-		// TODO: XXX: prepare to load LWJGL natives for the current OS. 
-		// extractNatives();
+		File libDir = new File("libs/native/" + getOs() + "/");
+		if(libDir.equals(null)) {
+			System.err.println("GAHH!");
+		}
+		String[] lists = libDir.list();
+		int inc = 1;
+		String cpu = System.getProperty("sun.cpu.isalist");
+		boolean bit64 = false;
+		if(cpu.equals("amd64")) {
+			bit64 = true;
+		}
+		for(String lib : lists) {
+			if(bit64) {
+				if(inc%2 == 0) {
+					System.load(System.getProperty("user.dir") + "/libs/native/" + getOs() + "/" + lib);
+				}
+			}
+			else {
+				if(inc%2 == 1) {
+					System.load(System.getProperty("user.dir") + "/libs/native/" + getOs() + "/" + lib);
+				}
+			}
+			inc++;
+		}
 
 		MainLoop loop = new MainLoop();
 		if(DEBUGGING) {
