@@ -9,7 +9,7 @@ const float tileStepX = 0.125;
 uniform float mapWidthInTiles;
 
 void main(void) {
-	gl_Position = gl_ModelViewProjectionMatrix * vec4(gl_Vertex.x, gl_Vertex.y, 0.0f, 1.0);
+	gl_Position = gl_ModelViewProjectionMatrix * vec4(gl_Vertex.x, gl_Vertex.y, 0.0, 1.0);
 
 	gl_TexCoord[0].y = (gl_Vertex.x - gl_Vertex.y * 2.0 - 1.0) / tileWidth * tileStepX;
 	gl_TexCoord[0].x = (mapWidthInTiles - gl_TexCoord[0].y + gl_Vertex.x / tileHalfWidth) * tileStepX;

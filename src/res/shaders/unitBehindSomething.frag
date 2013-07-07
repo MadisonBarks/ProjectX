@@ -4,8 +4,8 @@ uniform sampler2D tex;
 uniform vec4 tint;
 uniform float depth;
 uniform float mode;
-float ImgWidth = 1.0 / 2048.0f;
-float ImgHeight = 1.0 / 512.0f;
+float ImgWidth = 1.0 / 2048.0;
+float ImgHeight = 1.0 / 512.0;
 
 float[] xC = float[4](-ImgWidth, 0, 0, ImgWidth);
 float[] yC = float[4](0, -ImgHeight, ImgHeight, 0);
